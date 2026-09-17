@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>George Orwell - 1984 Wall Poster</title>
+    <style>
+        /* Base styles / Dark Theme for Screen */
+        :root {
+            --bg-color: #0d0e10;
+            --text-color: #e0e0e0;
+            --accent-color: #d93838;
+            --muted-color: #8a8d93;
+            --border-color: #2a2d34;
+            --card-bg: #141619;
+            --font-family: 'Courier New', Courier, monospace, system-ui, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-family);
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 2rem 1rem;
+        }
+
+        .poster {
+            max-width: 900px;
+            width: 100%;
+            background-color: var(--card-bg);
+            border: 2px solid var(--border-color);
+            padding: 3rem 2.5rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+            position: relative;
+        }
+
+        /* Timeline Header */
+        .timeline-header {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+            letter-spacing: 4px;
+            color: var(--accent-color);
+            margin-bottom: 2rem;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 1rem;
+        }
+
+        /* Slogans Box */
+        .slogans {
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 1.15rem;
+            letter-spacing: 2px;
+            margin-bottom: 2.5rem;
+            padding: 1.2rem;
+            border: 1px dashed var(--accent-color);
+            color: #ffffff;
+            background-color: rgba(217, 56, 56, 0.05);
+        }
+
+        /* Content Sections */
+        .section {
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .section-title {
+            color: var(--accent-color);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 0.8rem;
+            font-weight: bold;
+        }
+
+        p {
+            margin-bottom: 0.8rem;
+            font-size: 0.98rem;
+            text-align: justify;
+        }
+
+        /* Custom Box Style for Examples */
+        .examples-box {
+            background-color: rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--border-color);
+            padding: 1rem;
+            margin: 1rem 0;
+            font-size: 0.88rem;
+            line-height: 1.5;
+        }
+
+        .examples-box strong {
+            color: var(--accent-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .example-list {
+            margin-top: 0.5rem;
+            color: var(--muted-color);
+        }
+
+        /* Classes List */
+        .classes-list {
+            list-style: none;
+            margin: 1rem 0;
+            padding-left: 1rem;
+        }
+
+        .classes-list li {
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .classes-list strong {
+            color: #ffffff;
+            letter-spacing: 1px;
+        }
+
+        .highlight-quote {
+            font-style: italic;
+            color: #ffffff;
+            border-left: 3px solid var(--accent-color);
+            padding-left: 1rem;
+            margin: 1rem 0;
+        }
+
+        /* Proles List */
+        .proles-list {
+            list-style-type: square;
+            padding-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .proles-list li {
+            margin-bottom: 0.4rem;
+        }
+
+        .punchline {
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            margin-top: 1rem;
+        }
+
+        /* Footer Info */
+        .footer {
+            margin-top: 2.5rem;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--muted-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1.8;
+        }
+
+        .footer strong {
+            color: var(--text-color);
+        }
+
+        /* ===================================================
+           PRINT STYLESHEET (Αυτοματη διαμόρφωση για εκτύπωση)
+           =================================================== */
+        @media print {
+            body {
+                background-color: #ffffff !important;
+                color: #000000 !important;
+                padding: 0;
+            }
+
+            .poster {
+                background-color: #ffffff !important;
+                color: #000000 !important;
+                border: 2px solid #000000 !important;
+                box-shadow: none !important;
+                max-width: 100% !important;
+                padding: 1.5cm !important;
+            }
+
+            .timeline-header, .section-title, .punchline, .examples-box strong {
+                color: #000000 !important;
+            }
+
+            .slogans {
+                border: 2px solid #000000 !important;
+                color: #000000 !important;
+                background-color: transparent !important;
+            }
+
+            .section {
+                border-bottom: 1px solid #666666 !important;
+            }
+
+            .examples-box {
+                background-color: transparent !important;
+                border: 1px solid #000000 !important;
+            }
+
+            .example-list, .footer {
+                color: #333333 !important;
+            }
+
+            .highlight-quote {
+                border-left-color: #000000 !important;
+                color: #000000 !important;
+            }
+
+            .classes-list strong, .footer strong {
+                color: #000000 !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <main class="poster">
+        
+        <!-- Header Dates -->
+        <header class="timeline-header">
+            1984 από το 1948 εως αύριο...
+        </header>
+
+        <!-- Main Slogans -->
+        <div class="slogans">
+            Ο ΠΟΛΕΜΟΣ ΕΙΝΑΙ ΕΙΡΗΝΗ &nbsp;|&nbsp; Η ΕΛΕΥΘΕΡΙΑ ΕΙΝΑΙ ΣΚΛΑΒΙΑ<br>
+            Η ΑΓΝΟΙΑ ΕΙΝΑΙ ΔΥΝΑΜΗ
+        </div>
+
+        <!-- Section 1: War -->
+        <section class="section">
+            <div class="section-title">[ Η ΜΗΧΑΝΗ ΤΟΥ ΠΟΛΕΜΟΥ ]</div>
+            <p>
+                Ο πόλεμος δεν γίνεται για να κερδηθεί, γίνεται για να καταναλώνεται η παραγωγή χωρίς να ανεβαίνει το βιοτικό επίπεδο. Γιατί ένας πληθυσμός που έχει άνεση και χρόνο αρχίζει να σκέφτεται.
+            </p>
+            
+            <!-- Dynamic Conflicts Box -->
+            <div class="examples-box">
+                <strong>Διαρκείς / Ανοιχτές &amp; Τελειωμένες Συγκρούσεις (1945 – Σήμερα):</strong>
+                <div class="example-list">
+                    • <strong>Μέση Ανατολή &amp; Αραβικός Κόσμος:</strong> Ισραήλ – Παλαιστίνη &amp; Αραβοϊσραηλινοί Πόλεμοι (1948–σήμερα), Πόλεμος Ιράν – Ιράκ (1980–1988), Πόλεμος του Κόλπου &amp; Εισβολή στο Ιράκ (1991, 2003–2011), Εμφύλιος Συρίας (2011–σήμερα), Υεμένη, Λίβανος, Λιβύη.<br>
+                    • <strong>Ασία:</strong> Πόλεμος της Κορέας (1950–1953 / ατελείωτη ανακωχή), Πόλεμος του Βιετνάμ &amp; Ινδοκίνα (1955–1975), Πόλεμος στο Αφγανιστάν (Σοβιετική εισβολή 1979–1989 &amp; ΝΑΤΟϊκή επέμβαση 2001–2021), Ινδία – Πακιστάν (Κασμίρ).<br>
+                    • <strong>Ευρώπη &amp; Πρώην ΕΣΣΔ:</strong> Πόλεμος στην Ουκρανία (2014, 2022–σήμερα), Γιουγκοσλαβικοί Πόλεμοι &amp; Κοσσυφοπέδιο (1991–1999), Πόλεμοι Τσετσενίας, Γεωργία, Υπερδνειστερία, Ναγκόρνο-Καραμπάχ.<br>
+                    • <strong>Αφρική &amp; Λατινική Αμερική:</strong> Κονγκό, Σουδάν, Σομαλία, Αγκόλα, Εμφύλιοι &amp; Proxies Λατινικής Αμερικής (Κολομβία, Νικαράγουα, Ελ Σαλβαδόρ).
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Three Classes -->
+        <section class="section">
+            <div class="section-title">[ Η ΑΙΩΝΙΑ ΠΑΛΗ ΤΩΝ ΤΡΙΩΝ ΤΑΞΕΩΝ ]</div>
+            <p>
+                Σε κάθε εποχή υπήρχαν 3 τάξεις, η ανώτερη, η μεσαία και η κατώτερη. Οι στόχοι τους είναι ασυμφιλίωτοι.
+            </p>
+            <ul class="classes-list">
+                <li><strong>ΑΝΩΤΕΡΗ:</strong> Θέλουν να παραμείνουν εκεί που είναι.</li>
+                <li><strong>ΜΕΣΑΙΑ:</strong> Θέλει να πάρει τη θέση της ανώτερης.</li>
+                <li><strong>ΚΑΤΩΤΕΡΗ:</strong> Θέλει έναν κόσμο όπου όλοι θα είναι ίσοι.</li>
+            </ul>
+            <p>
+                Ο κύκλος επαναλαμβάνεται πάντα με τον ίδιο τρόπο. Η μεσαία τάξη στρατολογεί την κατώτερη με το αίσθημα της δικαιοσύνης, ανατρέπουν την ανώτερη τάξη και μετά σπρώχνουν την κατώτερη τάξη στη θέση της.
+            </p>
+            <div class="highlight-quote">
+                «Η επανάσταση δεν έχει αλλάξει ποτέ τη δομή, παρά μόνο τα ονόματα.»
+            </div>
+        </section>
+
+        <!-- Section 3: Proles -->
+        <section class="section">
+            <div class="section-title">[ ΟΙ ΠΡΟΛΕΤΑΡΙΟΙ ΚΑΙ Ο ΕΛΕΓΧΟΣ ]</div>
+            <p>
+                Αν υπάρχει ελπίδα είναι μόνο στους προλετάριους γιατί είναι το 85% και οι μόνοι που μπορούν να συντρίψουν το Κόμμα. Δεν θα εξεγερθούν όμως ποτέ γιατί δεν έχουν λόγο να το κάνουν και δεν θα αποκτήσουν λόγο πριν εξεγερθούν.
+            </p>
+            <p>
+                Το Κόμμα τους αφήνει εντελώς ελεύθερους. Δεν θεωρούνται επικίνδυνοι σε επίπεδο που να απειλούν κάτι. Τους δίνουν:
+            </p>
+            <ul class="proles-list">
+                <li>Φθηνό αλκοόλ και τζόγο</li>
+                <li>Αθλητικά αποτελέσματα</li>
+                <li>Μια μηχανή που παράγει τραγούδια και λαϊκά μυθιστορήματα, χωρίς καμία ανθρώπινη παρέμβαση</li>
+            </ul>
+
+            <!-- Modern Proles Control Box -->
+            <div class="examples-box">
+                <strong>Σύγχρονες Μηχανές Απόσπασης Προσοχής &amp; Παρακολούθησης:</strong>
+                <div class="example-list">
+                    • <strong>Τζόγος &amp; Θεάματα:</strong> On-line casino ελεύθερα χωρίς κανένα όριο, αθλητικά στοιχήματα, λαχεία, τυχερά παιχνίδια, Ολυμπιακοί Αγώνες, άπειρες διοργανώσεις κάθε χρόνο, ποδόσφαιρο, μπάσκετ.<br>
+                    • <strong>Εθισμοί &amp; Ουσίες:</strong> Παραδοσιακά τσιγάρα, στριφτά, ηλεκτρονικά τσιγάρα κάθε είδους για να μην ενοχλείς τους γύρω σου, διαδοχική απελευθέρωση της κάνναβης, ενώ έρχονται και τα σκληρά.<br>
+                    • <strong>Ψηφιακή Νάρκωση &amp; Εικόνα:</strong> Social media παντού και για κάθε ηλικία, να απασχολείσαι με τη φανταστική σου εικόνα σαν να μην υπάρχει αύριο.<br>
+                    • <strong>Μαζική Ψυχαγωγία &amp; AI:</strong> Τραγούδια ό,τι θες (Trap, Rock, Trance, Εκκλησιαστική, Λαϊκή, Hip-Hop, Electro) όπου πλέον και η AI φτιάχνει μουσική και έπεται συνέχεια. Ταινίες όποιο είδος κι αν ψάξεις.<br>
+                    • <strong>Ψηφιακός Έλεγχος:</strong> Ο διαδικτυακός έλεγχος και η παρακολούθηση είναι πλέον παντού. Τίποτα στο δίκτυο δεν μένει κρυφό — ακόμα και τα VPN και το Tor έχει αποδειχθεί ότι παρακολουθούνται. Ο προλετάριος είναι το προϊόν, πλέον με τη θέλησή του.
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Relationships & Power -->
+        <section class="section">
+            <div class="section-title">[ Η ΕΡΩΤΙΚΗ ΖΩΗ ΩΣ ΠΟΛΙΤΙΚΗ ΠΡΑΞΗ ]</div>
+            <p>
+                Οι σχέσεις δεν είναι ρομαντικό υποπροϊόν, είναι πολιτική πράξη. Το Κόμμα έχει στρατηγικό λόγο να καταστρέφει την ερωτική ζωή. Ένας άνθρωπος που έχει μια ιδιωτική πηγή ευτυχίας έχει κάτι που δεν το ελέγχει το κράτος.
+            </p>
+
+            <!-- Modern Emotional Control Box -->
+            <div class="examples-box">
+                <strong>Ψυχολογική Χειραγώγηση &amp; Τεχνολογική Απομόνωση:</strong>
+                <div class="example-list">
+                    • <strong>Έμμεση Χειραγώγηση:</strong> Σταδιακή αποδόμηση της ερωτικής ζωής με έμμεσες ψυχολογικές μεθόδους, επαναπροσδιορισμός της αρρενωπότητας και σταδιακός εκφυλισμός των συναισθημάτων.<br>
+                    • <strong>Αποσύνδεση &amp; Ατεκνία:</strong> Παρατεταμένη απουσία πραγματικής ανθρώπινης σύνδεσης, μη τεκνοποίηση και η κατάρρευση της οικογένειας ως θεσμού — όχι άμεσα, αλλά σιγά-σιγά σε βάθος γενεών.<br>
+                    • <strong>Ο Απόλυτος Έλεγχος (AI Companions):</strong> Με τη βοήθεια της τεχνολογίας, σε λίγα χρόνια οι AI σύντροφοι θα καλύψουν πλήρως την ερωτική και συναισθηματική ζωή και των δύο φύλων. Η οικειότητα ιδιωτικοποιείται και περνά στον απόλυτο έλεγχο των εταιρειών τεχνητής νοημοσύνης.
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: The Party -->
+        <section class="section">
+            <div class="section-title">[ Η ΑΠΟΛΥΤΗ ΕΞΟΥΣΙΑ ]</div>
+            <p>
+                Το Κόμμα δεν ενδιαφέρεται για την ευημερία κανενός. Ενδιαφέρεται μόνο για τη διατήρηση της εξουσίας.
+            </p>
+            <div class="punchline">
+                Το πραγματικό τέλος δεν είναι ο θάνατος, αλλά η προδοσία.
+            </div>
+        </section>
+
+        <!-- Footer / Credits -->
+        <footer class="footer">
+            <strong>George Orwell</strong> &bull; Eric Arthur Blair (25 June 1903 – 21 January 1950)<br>
+            🪦 Jura, Inner Hebrides of Scotland
+        </footer>
+
+    </main>
+
+</body>
+</html>
